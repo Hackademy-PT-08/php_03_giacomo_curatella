@@ -16,17 +16,17 @@ function checkPassword (&$check) {
     $password = readline('Inserisci la password: ');
     //controllo se la pass è lunga almeno 8 caratteri
     if(strlen($password) < 8) {
-        echo "la passa deve essere lunga almeno 8 Caratteri! \n";
+        echo "la password deve essere lunga almeno 8 Caratteri! \n";
         return;
     }
     //controlliamo se la passa include almeno 1 lettera maiuscola
     if(!preg_match('/[A-Z]/', $password)){
-        echo "La pass deve contenere almeno una lettera maiuscola! \n";
+        echo "La password deve contenere almeno una lettera maiuscola! \n";
         return;
     }
     //controllo che la pass contenga almeno un numero
     if(!preg_match('/[0-9]/', $password)){
-        echo "La pass deve contenere almeno un numero! \n";
+        echo "La password deve contenere almeno un numero! \n";
         return;
     }
     //controllo che la passwd contenga almeno un carattere speciale
@@ -36,7 +36,7 @@ function checkPassword (&$check) {
     };
 
     //se tutti i contrilli vanno a buon fine valorizzo con true la variabile $passwordIsValid e restituisco il messaggio di successo all'utente stampando la password in console per controllarne il valore
-    echo "La password da lei inserita è CORRETTA!: ($password) \n";
+    echo "La password inserita è CORRETTA!: ($password) \n";
     $check = true;
 }
 
